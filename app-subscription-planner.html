@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscription Planner · balance.</title>
+<meta name="description" content="Works out how many sachets you need, the best delivery schedule and your yearly saving with Subscribe &amp; Save.">
+<meta name="author" content="O. Gazi Kavak">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23000'/%3E%3Ctext x='16' y='22' font-family='Poppins,Arial,sans-serif' font-size='17' font-weight='300' fill='%23fff' text-anchor='middle'%3Eb.%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@800&family=Inter:wght@300;400;700&family=Space+Mono:wght@700&family=Asul&family=Nunito+Sans:wght@400&family=Space+Grotesk:wght@400;600&family=Work+Sans:wght@400&family=Bebas+Neue&family=Figtree:wght@400;700&family=DM+Sans:wght@400&family=Archivo:wght@800&family=Outfit:wght@600&family=Arima:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="ap">
+<div class="top"><div class="wrap">
+  <a class="logo" href="index.html#/" aria-label="balance. Brand Radar"><svg class="blogo" viewBox="0 0 107 30" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="balance."><g fill="currentColor"><path d="M14.84,18.46c0,3.85-3.13,6.98-6.98,6.98-1.68,0-3.22-.6-4.43-1.59v.31c0,.7-.57,1.28-1.28,1.28s-1.28-.57-1.28-1.28v-5.7h0V5.84c0-.7.57-1.27,1.28-1.27s1.28.57,1.28,1.27v7.23c1.2-.99,2.75-1.59,4.43-1.59,3.85,0,6.98,3.13,6.98,6.98ZM12.29,18.46c0-2.44-1.99-4.43-4.430-4.43s-4.42,1.98-4.43,4.42h0c0,2.45,1.99,4.43,4.43,4.43s4.43-1.99,4.43-4.43Z"/><path d="M31.34,18.46s0,0,0,0v5.69c0,.7-.57,1.28-1.28,1.28s-1.27-.57-1.27-1.28v-.31c-1.21.99-2.75,1.59-4.43,1.59-3.85,0-6.98-3.13-6.98-6.98s3.13-6.98,6.98-6.98c1.68,0,3.22.6,4.42,1.59v-.31c0-.7.57-1.28,1.28-1.28s1.28.57,1.28,1.28v5.69h0ZM28.79,18.45c0-2.44-1.99-4.42-4.42-4.42s-4.43,1.98-4.43,4.43,1.99,4.43,4.43,4.43,4.42-1.98,4.42-4.42h0Z"/><path d="M37.48,5.86v18.3c0,.71-.57,1.28-1.28,1.28s-1.28-.57-1.28-1.28V5.86c0-.7.57-1.28,1.28-1.28s1.28.57,1.28,1.28Z"/><path d="M54.73,18.46s0,0,0,0v5.69c0,.7-.57,1.28-1.27,1.28s-1.28-.57-1.28-1.28v-.31c-1.21.99-2.75,1.59-4.43,1.59-3.85,0-6.98-3.13-6.98-6.98s3.13-6.98,6.98-6.98c1.68,0,3.22.6,4.42,1.59v-.31c0-.7.57-1.28,1.28-1.28s1.28.57,1.28,1.28v5.69h0ZM52.18,18.45c0-2.44-1.99-4.42-4.42-4.42s-4.43,1.98-4.43,4.43,1.99,4.43,4.43,4.43,4.42-1.98,4.42-4.42h0Z"/><path d="M70.6,17.62v6.54c0,.7-.57,1.28-1.28,1.28s-1.27-.57-1.27-1.28v-6.54c0-1.98-1.61-3.59-3.59-3.59s-3.59,1.61-3.59,3.59v6.54c0,.71-.57,1.28-1.28,1.28s-1.280-.57-1.28-1.28v-11.4c0-.7.57-1.27,1.28-1.27s1.21.52,1.27,1.18c1.01-.74,2.25-1.18,3.6-1.18,3.39,0,6.14,2.75,6.14,6.14Z"/><path d="M85.08,23.39c-1.36,1.36-3.15,2.04-4.93,2.04s-3.57-.68-4.93-2.04c-2.72-2.72-2.72-7.15,0-9.87,1.32-1.32,3.07-2.04,4.93-2.04s3.62.73,4.93,2.05c.5.5.5,1.31,0,1.8-.5.5-1.31.5-1.8,0-.84-.84-1.95-1.3-3.13-1.3s-2.29.46-3.13,1.3c-1.73,1.73-1.73,4.53,0,6.26s4.53,1.73,6.26,0c.5-.5,1.3-.5,1.8,0s.5,1.31,0,1.8Z"/><path d="M101.96,18.46c0,.7-.57,1.28-1.27,1.28h-9.94c.2.68.57,1.32,1.11,1.85,1.73,1.73,4.53,1.73,6.26,0,.5-.5,1.3-.5,1.8,0,.5.5.5,1.3,0,1.8-1.36,1.36-3.15,2.04-4.93,2.04s-3.57-.68-4.93-2.04c-1.33-1.33-2.01-3.08-2.04-4.83,0-.03,0-.07,0-.1s0-.07,0-.1c.03-1.75.71-3.5,2.04-4.83,2.72-2.72,7.15-2.72,9.87,0,1.32,1.32,2.04,3.07,2.04,4.93ZM99.23,17.19c-.21-.69-.58-1.33-1.11-1.85-1.73-1.73-4.53-1.73-6.26,0-.54.54-.9,1.18-1.11,1.85h8.48Z"/><path d="M103.35,24.01c0-.76.62-1.380,1.38-1.38s1.38.62,1.38,1.38-.62,1.38-1.38,1.38-1.38-.62-1.38-1.38Z"/></g></svg></a>
+  <nav class="menu" id="menu">
+    <a href="index.html#/">Overview</a>
+    <a href="index.html#/brands">Brands</a>
+    <a href="index.html#/maps">Market maps</a>
+    <a href="index.html#/compare">Compare</a>
+    <a href="index.html#/seo">SEO</a>
+    <a href="index.html#/social">Social &amp; Ads</a>
+    <a href="index.html#/packaging">Packaging</a>
+    <a href="index.html#/design">Design &amp; Type</a>
+    <div class="mfoot"><a class="mfind mapps" href="apps.html">Apps</a><a class="mfind" href="seo-report.html">What is next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><p>Prepared by O. Gazi Kavak</p></div>
+  </nav>
+  <div class="tools">
+    <button class="ib" id="findbtn" type="button" aria-label="Find a brand" aria-expanded="false" aria-controls="finder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><span class="lbl">Brands</span><kbd>/</kbd></button>
+    <a class="apb" href="apps.html" aria-current="page">Apps</a>
+    <a class="wn" href="seo-report.html">What is next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <button class="ib burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg class="l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="finder" id="finder" role="dialog" aria-label="Find a brand" hidden>
+    <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="findq" type="search" placeholder="Find a brand" autocomplete="off" spellcheck="false" aria-label="Brand name"></div>
+    <ul id="findlist"></ul>
+  </div>
+</div></div>
+<main>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Apps · 01</div>
+  <h1 style="margin-top:18px">Subscription Planner</h1>
+  <p class="lead" style="margin-top:24px">Works out how many sachets you need, the best delivery schedule and your yearly saving with Subscribe &amp; Save.</p>
+  <div class="appnav"><a class="btn" href="apps.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All apps</a></div>
+</div></header>
+<section><div class="wrap">
+  <div class="apptool">
+<!-- balance. — Tool 1: Selene Subscription Planner (paste into a Shopify "Custom Liquid" section) -->
+<div class="bal-sub-card" id="bal-sub-root">
+  <h2 class="bal-sub-title">plan your selene subscription</h2>
+  <p class="bal-sub-intro">Tell us how often you'd like a sachet and we'll suggest a delivery rhythm.</p>
+
+  <div class="bal-sub-field">
+    <label class="bal-sub-label" for="bal-sub-training">Training days per week</label>
+    <div class="bal-sub-stepper">
+      <button type="button" class="bal-sub-step" data-target="bal-sub-training" data-delta="-1" aria-label="Fewer training days">&#8722;</button>
+      <input class="bal-sub-input" id="bal-sub-training" type="number" inputmode="numeric" min="0" max="7" step="1" value="3" aria-describedby="bal-sub-training-msg">
+      <button type="button" class="bal-sub-step" data-target="bal-sub-training" data-delta="1" aria-label="More training days">+</button>
+    </div>
+    <p class="bal-sub-msg" id="bal-sub-training-msg"></p>
+  </div>
+
+  <div class="bal-sub-field">
+    <label class="bal-sub-label" for="bal-sub-other">Other days (e.g. a busy workday or evening)</label>
+    <div class="bal-sub-stepper">
+      <button type="button" class="bal-sub-step" data-target="bal-sub-other" data-delta="-1" aria-label="Fewer other days">&#8722;</button>
+      <input class="bal-sub-input" id="bal-sub-other" type="number" inputmode="numeric" min="0" max="7" step="1" value="1" aria-describedby="bal-sub-other-msg">
+      <button type="button" class="bal-sub-step" data-target="bal-sub-other" data-delta="1" aria-label="More other days">+</button>
+    </div>
+    <p class="bal-sub-msg" id="bal-sub-other-msg"></p>
+  </div>
+
+  <p class="bal-sub-msg" id="bal-sub-cap"></p>
+
+  <div class="bal-sub-results" id="bal-sub-results" aria-live="polite"></div>
+  <div class="bal-sub-cta" id="bal-sub-cta"></div>
+
+  <p class="bal-sub-privacy">Your answers stay on this device and aren't saved.</p>
+  <p class="bal-sub-disclaimer">This is a general estimate for healthy adults and isn't medical advice. If you have a medical condition, are pregnant or breastfeeding, or are unsure, speak to a healthcare professional.</p>
+</div>
+
+<style>
+.bal-sub-card{box-sizing:border-box;font-family:Poppins,sans-serif;font-size:max(1rem,16px);line-height:1.5;color:#111111;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:7px;padding:2em;max-width:40em;margin:0 auto;text-align:left}
+.bal-sub-card *,.bal-sub-card *::before,.bal-sub-card *::after{box-sizing:border-box}
+.bal-sub-title{font-family:Poppins,sans-serif;font-size:1.625em;font-weight:300;line-height:1.2;letter-spacing:-.034em;color:#111111;margin:0 0 .35em}
+.bal-sub-intro{font-size:.9375em;color:#666666;margin:0 0 1.25em}
+.bal-sub-field{margin:0 0 1em}
+.bal-sub-label{display:block;font-size:.875em;font-weight:400;margin:0 0 .4em;color:#111111}
+.bal-sub-stepper{display:grid;grid-template-columns:2.75em minmax(0,1fr) 2.75em;gap:.5em;max-width:15em}
+.bal-sub-step{min-height:2.75em;min-width:0;width:100%;font:inherit;font-size:1em;line-height:1;color:#111111;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:7px;cursor:pointer}
+.bal-sub-step:hover{border-color:#111111}
+.bal-sub-input{width:100%;min-height:2.75em;padding:.5em .75em;font:inherit;font-size:1em;text-align:center;color:#111111;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:7px;-moz-appearance:textfield;appearance:textfield}
+.bal-sub-input::-webkit-outer-spin-button,.bal-sub-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.bal-sub-input[aria-invalid="true"]{border-color:#111111}
+.bal-sub-step:focus-visible,.bal-sub-input:focus-visible,.bal-sub-btn:focus-visible,.bal-sub-link:focus-visible{outline:2px solid #111111;outline-offset:2px}
+.bal-sub-msg{font-size:.8125em;color:#666666;margin:.35em 0 0}
+.bal-sub-msg:empty{display:none}
+.bal-sub-results{margin-top:1.25em;padding-top:1.25em;border-top:1px solid #E5E5E5}
+.bal-sub-big{font-size:2em;font-weight:300;line-height:1.15;letter-spacing:-.04em;margin:0 0 .3em;color:#111111}
+.bal-sub-line{font-size:.9375em;margin:.35em 0 0;color:#111111}
+.bal-sub-cta{margin-top:1.25em}
+.bal-sub-cta:empty{display:none}
+.bal-sub-cta form{margin:0}
+.bal-sub-btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75em;padding:.65em 1.5em;font:inherit;font-size:1em;font-weight:500;color:#FFFFFF;background:#111111;border:1px solid #111111;border-radius:7px;text-decoration:none;cursor:pointer;width:100%;max-width:20em}
+.bal-sub-btn:hover{background:#FFFFFF;color:#111111}
+.bal-sub-privacy{font-size:.8125em;color:#666666;margin:1.5em 0 .5em}
+.bal-sub-disclaimer{font-size:.75em;line-height:1.5;color:#666666;margin:0}
+@media (max-width:30em){.bal-sub-card{padding:1.25em 1em}.bal-sub-big{font-size:1.625em} }
+@media (prefers-reduced-motion:reduce){.bal-sub-card *{transition:none!important;animation:none!important} }
+</style>
+
+<script>
+(function () {
+  /* ===================== CONFIG — edit these values ===================== */
+  var CONFIG = {
+    PRICE_GBP: 28.00,                      // one-off price of one pouch
+    SUBSCRIPTION_DISCOUNT: 0.20,           // 0.20 = 20% off with Subscribe & Save
+    SACHETS_PER_PACK: 20,                  // sachets in one pouch
+    MAX_DAILY_SACHETS: 2,                  // on-pack maximum daily intake
+    DELIVERY_FREQUENCIES_WEEKS: [2, 4, 6, 8],
+    VARIANT_ID: "",                        // PLACEHOLDER — Selene variant ID (numbers only)
+    SELLING_PLAN_ID: "",                   // PLACEHOLDER — Subscribe & Save selling plan ID
+    PRODUCT_URL: "/products/selene"
+  };
+  /* ====================================================================== */
+
+  var root = document.getElementById("bal-sub-root");
+  if (!root) return;
+  var training = document.getElementById("bal-sub-training");
+  var other = document.getElementById("bal-sub-other");
+  var capMsg = document.getElementById("bal-sub-cap");
+  var results = document.getElementById("bal-sub-results");
+  var cta = document.getElementById("bal-sub-cta");
+
+  var gbp = function (n) {
+    return new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP" }).format(n);
+  };
+  var esc = function (s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  };
+
+  // Reads a 0–7 day count; returns a number or null, and writes a friendly message.
+  function readDays(input) {
+    var msg = document.getElementById(input.id + "-msg");
+    var raw = input.value.trim();
+    var text = "";
+    var value = null;
+    if (raw === "") {
+      text = "Enter a number of days from 0 to 7.";
+    } else {
+      var n = Number(raw);
+      if (!isFinite(n)) text = "Please enter a whole number of days.";
+      else if (n < 0) text = "This can't be less than 0.";
+      else if (n > 7) text = "There are only 7 days in a week.";
+      else if (Math.round(n) !== n) text = "Please use whole days.";
+      else value = n;
+    }
+    msg.textContent = text;
+    input.setAttribute("aria-invalid", text ? "true" : "false");
+    return value;
+  }
+
+  function renderCta() {
+    var variant = String(CONFIG.VARIANT_ID).trim();
+    var plan = String(CONFIG.SELLING_PLAN_ID).trim();
+    if (variant && plan) {
+      cta.innerHTML =
+        '<form method="post" action="/cart/add">' +
+        '<input type="hidden" name="id" value="' + esc(variant) + '">' +
+        '<input type="hidden" name="selling_plan" value="' + esc(plan) + '">' +
+        '<input type="hidden" name="quantity" value="1">' +
+        '<button type="submit" class="bal-sub-btn">Subscribe &amp; Save</button>' +
+        "</form>";
+    } else {
+      cta.innerHTML = '<a class="bal-sub-btn" href="' + esc(CONFIG.PRODUCT_URL) + '">Subscribe &amp; Save</a>';
+    }
+  }
+
+  function update() {
+    var t = readDays(training);
+    var o = readDays(other);
+    capMsg.textContent = "";
+    if (t === null || o === null) {
+      results.innerHTML = "";
+      return;
+    }
+
+    var maxPerWeek = 7 * CONFIG.MAX_DAILY_SACHETS;
+    var sachetsPerWeek = t + o;
+    if (sachetsPerWeek > maxPerWeek) {
+      sachetsPerWeek = maxPerWeek;
+      capMsg.textContent = "The on-pack maximum is " + CONFIG.MAX_DAILY_SACHETS + " sachet" +
+        (CONFIG.MAX_DAILY_SACHETS === 1 ? "" : "s") + " a day, so we've capped this at " + maxPerWeek + " a week.";
+    }
+
+    if (sachetsPerWeek === 0) {
+      results.innerHTML = '<p class="bal-sub-line">Add at least one day above and we\'ll suggest a delivery rhythm.</p>';
+      return;
+    }
+
+    var sachetsPerMonth = sachetsPerWeek * 52 / 12;
+    var weeksPerPack = CONFIG.SACHETS_PER_PACK / sachetsPerWeek;
+    var freqs = CONFIG.DELIVERY_FREQUENCIES_WEEKS.slice().sort(function (a, b) { return a - b; });
+    var recommended = 2;
+    freqs.forEach(function (f) { if (f <= weeksPerPack && f > recommended) recommended = f; });
+    var packsPerYear = 52 / recommended;
+    var oneOffYearlyCost = packsPerYear * CONFIG.PRICE_GBP;
+    var subscriptionYearlyCost = oneOffYearlyCost * (1 - CONFIG.SUBSCRIPTION_DISCOUNT);
+    var yearlySaving = oneOffYearlyCost - subscriptionYearlyCost;
+
+    results.innerHTML =
+      '<p class="bal-sub-big">About ' + Math.round(sachetsPerMonth) + " sachets a month</p>" +
+      '<p class="bal-sub-line">We\'d suggest a delivery every ' + recommended + " weeks.</p>" +
+      '<p class="bal-sub-line">Save ' + gbp(yearlySaving) + " a year with Subscribe &amp; Save, plus free delivery on subscription orders.</p>";
+  }
+
+  root.addEventListener("click", function (e) {
+    var btn = e.target.closest(".bal-sub-step");
+    if (!btn) return;
+    var input = document.getElementById(btn.getAttribute("data-target"));
+    var current = Number(input.value);
+    if (!isFinite(current) || input.value.trim() === "") current = 0;
+    var next = Math.min(7, Math.max(0, Math.round(current) + Number(btn.getAttribute("data-delta"))));
+    input.value = next;
+    update();
+  });
+  training.addEventListener("input", update);
+  other.addEventListener("input", update);
+
+  renderCta();
+  update();
+})();
+</script>
+
+  </div>
+  <nav class="apppager" aria-label="Other apps"><a class="nx" href="app-daily-water-target.html"><small>Next →</small><span>Daily Water Target</span></a></nav>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <p class="credit" style="margin-top:0">Prepared by O. Gazi Kavak</p>
+</div></footer>
+<script>
+const BRANDS=[{"id": "selene", "name": "balance. Selene", "short": "Selene", "accent": "#111111", "note": "Reference"}, {"id": "ab", "name": "Ancient + Brave", "short": "A+B", "accent": "#535F4A", "note": "£1.07/serving"}, {"id": "artah", "name": "ARTAH", "short": "ARTAH", "accent": "#000000", "note": "£1.07/serving"}, {"id": "drvegan", "name": "DR.VEGAN", "short": "DR.VEGAN", "accent": "#C2185B", "note": "£1.33/serving"}, {"id": "freesoul", "name": "Free Soul", "short": "Free Soul", "accent": "#39000B", "note": "£1.08/serving"}, {"id": "heights", "name": "Heights", "short": "Heights", "accent": "#010071", "note": "£1.21/serving"}, {"id": "humantra", "name": "Humantra", "short": "Humantra", "accent": "#75DFE3", "note": "£1.40/serving"}, {"id": "innermost", "name": "Innermost", "short": "Innermost", "accent": "#BFE0E6", "note": "£1.10/serving"}, {"id": "liquidiv", "name": "Liquid I.V.", "short": "Liquid I.V.", "accent": "#1B75BB", "note": "£1.27/serving"}, {"id": "lmnt", "name": "LMNT", "short": "LMNT", "accent": "#FFF200", "note": "£1.27/serving"}, {"id": "pfh", "name": "Precision Fuel & Hydration", "short": "PF&H", "accent": "#6A2C91", "note": "£0.90/serving"}, {"id": "punchy", "name": "Punchy", "short": "Punchy", "accent": "#D1E2A9", "note": "£1.35/serving"}, {"id": "puresport", "name": "Puresport", "short": "Puresport", "accent": "#E8476A", "note": "£1.10/serving"}, {"id": "sis", "name": "Science in Sport (SiS)", "short": "SiS", "accent": "#E6007E", "note": "£0.38/serving"}, {"id": "spacegoods", "name": "Spacegoods", "short": "Spacegoods", "accent": "#8E7BD6", "note": "£2.00/serving"}, {"id": "styrkr", "name": "STYRKR", "short": "STYRKR", "accent": "#1D1D1B", "note": "£1.00/serving"}, {"id": "sult", "name": "SULT", "short": "SULT", "accent": "#CDFF00", "note": "£1.19/serving"}, {"id": "veloforte", "name": "Veloforte", "short": "Veloforte", "accent": "#F28C28", "note": "£2.08/serving"}, {"id": "zooki", "name": "Zooki", "short": "Zooki", "accent": "#D85418", "note": "£2.14/serving"}];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TOP=document.querySelector(".top"), burger=document.getElementById("burger");
+const finder=document.getElementById("finder"), findbtn=document.getElementById("findbtn"), findq=document.getElementById("findq"), findlist=document.getElementById("findlist");
+let act=0;
+function renderFind(){
+  const q=findq.value.trim().toLowerCase();
+  const hits=BRANDS.filter(b=>!q||b.name.toLowerCase().includes(q)||b.short.toLowerCase().includes(q));
+  act=Math.min(act,Math.max(0,hits.length-1));
+  findlist.innerHTML=hits.length?hits.map((b,i)=>`<li><a href="index.html#/brand/${b.id}" class="${i===act?"act":""}"><i style="background:${b.accent}"></i><span>${esc(b.name)}</span><small>${b.note}</small></a></li>`).join(""):`<li class="empty">No brand matches “${esc(findq.value)}”.</li>`;
+}
+function setMenu(open){TOP.classList.toggle("open",open); document.body.classList.toggle("lock",open); burger.setAttribute("aria-expanded",open); burger.setAttribute("aria-label",open?"Close menu":"Open menu"); if(open) setFinder(false);}
+function setFinder(open){finder.hidden=!open; findbtn.setAttribute("aria-expanded",open); if(open){setMenu(false); findq.value=""; act=0; renderFind(); setTimeout(()=>findq.focus(),0);}}
+burger.addEventListener("click",()=>setMenu(!TOP.classList.contains("open")));
+findbtn.addEventListener("click",()=>setFinder(finder.hidden));
+findq.addEventListener("input",()=>{act=0; renderFind();});
+findq.addEventListener("keydown",e=>{
+  const items=findlist.querySelectorAll("a");
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault(); act=(act+(e.key==="ArrowDown"?1:-1)+items.length)%Math.max(1,items.length); renderFind(); const a=findlist.querySelectorAll("a")[act]; a&&a.scrollIntoView({block:"nearest"});}
+  else if(e.key==="Enter"&&items[act]){e.preventDefault(); location.href=items[act].getAttribute("href");}
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){if(!finder.hidden){setFinder(false); findbtn.focus();} setMenu(false);}
+  else if(e.key==="/"&&finder.hidden&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault(); setFinder(true);}
+});
+document.addEventListener("click",e=>{if(!TOP.contains(e.target)){setFinder(false); setMenu(false);}});
+document.getElementById("menu").addEventListener("click",e=>{if(e.target.closest("a")) setMenu(false);});
+document.querySelectorAll(".toc2 a").forEach(a=>a.addEventListener("click",e=>{const el=document.querySelector(a.getAttribute("href")); if(el){e.preventDefault(); el.scrollIntoView({behavior:"smooth"}); history.replaceState(null,"",a.getAttribute("href"));}}));
+</script>
+</body>
+</html>

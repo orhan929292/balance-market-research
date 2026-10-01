@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sweat Loss Calculator · balance.</title>
+<meta name="description" content="Shows how much fluid you lose through sweat during training.">
+<meta name="author" content="O. Gazi Kavak">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23000'/%3E%3Ctext x='16' y='22' font-family='Poppins,Arial,sans-serif' font-size='17' font-weight='300' fill='%23fff' text-anchor='middle'%3Eb.%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@800&family=Inter:wght@300;400;700&family=Space+Mono:wght@700&family=Asul&family=Nunito+Sans:wght@400&family=Space+Grotesk:wght@400;600&family=Work+Sans:wght@400&family=Bebas+Neue&family=Figtree:wght@400;700&family=DM+Sans:wght@400&family=Archivo:wght@800&family=Outfit:wght@600&family=Arima:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="ap">
+<div class="top"><div class="wrap">
+  <a class="logo" href="index.html#/" aria-label="balance. Brand Radar"><svg class="blogo" viewBox="0 0 107 30" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="balance."><g fill="currentColor"><path d="M14.84,18.46c0,3.85-3.13,6.98-6.98,6.98-1.68,0-3.22-.6-4.43-1.59v.31c0,.7-.57,1.28-1.28,1.28s-1.28-.57-1.28-1.28v-5.7h0V5.84c0-.7.57-1.27,1.28-1.27s1.28.57,1.28,1.27v7.23c1.2-.99,2.75-1.59,4.43-1.59,3.85,0,6.98,3.13,6.98,6.98ZM12.29,18.46c0-2.44-1.99-4.43-4.430-4.43s-4.42,1.98-4.43,4.42h0c0,2.45,1.99,4.43,4.43,4.43s4.43-1.99,4.43-4.43Z"/><path d="M31.34,18.46s0,0,0,0v5.69c0,.7-.57,1.28-1.28,1.28s-1.27-.57-1.27-1.28v-.31c-1.21.99-2.75,1.59-4.43,1.59-3.85,0-6.98-3.13-6.98-6.98s3.13-6.98,6.98-6.98c1.68,0,3.22.6,4.42,1.59v-.31c0-.7.57-1.28,1.28-1.28s1.28.57,1.28,1.28v5.69h0ZM28.79,18.45c0-2.44-1.99-4.42-4.42-4.42s-4.43,1.98-4.43,4.43,1.99,4.43,4.43,4.43,4.42-1.98,4.42-4.42h0Z"/><path d="M37.48,5.86v18.3c0,.71-.57,1.28-1.28,1.28s-1.28-.57-1.28-1.28V5.86c0-.7.57-1.28,1.28-1.28s1.28.57,1.28,1.28Z"/><path d="M54.73,18.46s0,0,0,0v5.69c0,.7-.57,1.28-1.27,1.28s-1.28-.57-1.28-1.28v-.31c-1.21.99-2.75,1.59-4.43,1.59-3.85,0-6.98-3.13-6.98-6.98s3.13-6.98,6.98-6.98c1.68,0,3.22.6,4.42,1.59v-.31c0-.7.57-1.28,1.28-1.28s1.28.57,1.28,1.28v5.69h0ZM52.18,18.45c0-2.44-1.99-4.42-4.42-4.42s-4.43,1.98-4.43,4.43,1.99,4.43,4.43,4.43,4.42-1.98,4.42-4.42h0Z"/><path d="M70.6,17.62v6.54c0,.7-.57,1.28-1.28,1.28s-1.27-.57-1.27-1.28v-6.54c0-1.98-1.61-3.59-3.59-3.59s-3.59,1.61-3.59,3.59v6.54c0,.71-.57,1.28-1.28,1.28s-1.280-.57-1.28-1.28v-11.4c0-.7.57-1.27,1.28-1.27s1.21.52,1.27,1.18c1.01-.74,2.25-1.18,3.6-1.18,3.39,0,6.14,2.75,6.14,6.14Z"/><path d="M85.08,23.39c-1.36,1.36-3.15,2.04-4.93,2.04s-3.57-.68-4.93-2.04c-2.72-2.72-2.72-7.15,0-9.87,1.32-1.32,3.07-2.04,4.93-2.04s3.62.73,4.93,2.05c.5.5.5,1.31,0,1.8-.5.5-1.31.5-1.8,0-.84-.84-1.95-1.3-3.13-1.3s-2.29.46-3.13,1.3c-1.73,1.73-1.73,4.53,0,6.26s4.53,1.73,6.26,0c.5-.5,1.3-.5,1.8,0s.5,1.31,0,1.8Z"/><path d="M101.96,18.46c0,.7-.57,1.28-1.27,1.28h-9.94c.2.68.57,1.32,1.11,1.85,1.73,1.73,4.53,1.73,6.26,0,.5-.5,1.3-.5,1.8,0,.5.5.5,1.3,0,1.8-1.36,1.36-3.15,2.04-4.93,2.04s-3.57-.68-4.93-2.04c-1.33-1.33-2.01-3.08-2.04-4.83,0-.03,0-.07,0-.1s0-.07,0-.1c.03-1.75.71-3.5,2.04-4.83,2.72-2.72,7.15-2.72,9.87,0,1.32,1.32,2.04,3.07,2.04,4.93ZM99.23,17.19c-.21-.69-.58-1.33-1.11-1.85-1.73-1.73-4.53-1.73-6.26,0-.54.54-.9,1.18-1.11,1.85h8.48Z"/><path d="M103.35,24.01c0-.76.62-1.380,1.38-1.38s1.38.62,1.38,1.38-.62,1.38-1.38,1.38-1.38-.62-1.38-1.38Z"/></g></svg></a>
+  <nav class="menu" id="menu">
+    <a href="index.html#/">Overview</a>
+    <a href="index.html#/brands">Brands</a>
+    <a href="index.html#/maps">Market maps</a>
+    <a href="index.html#/compare">Compare</a>
+    <a href="index.html#/seo">SEO</a>
+    <a href="index.html#/social">Social &amp; Ads</a>
+    <a href="index.html#/packaging">Packaging</a>
+    <a href="index.html#/design">Design &amp; Type</a>
+    <div class="mfoot"><a class="mfind mapps" href="apps.html">Apps</a><a class="mfind" href="seo-report.html">What is next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><p>Prepared by O. Gazi Kavak</p></div>
+  </nav>
+  <div class="tools">
+    <button class="ib" id="findbtn" type="button" aria-label="Find a brand" aria-expanded="false" aria-controls="finder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><span class="lbl">Brands</span><kbd>/</kbd></button>
+    <a class="apb" href="apps.html" aria-current="page">Apps</a>
+    <a class="wn" href="seo-report.html">What is next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <button class="ib burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg class="l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="finder" id="finder" role="dialog" aria-label="Find a brand" hidden>
+    <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="findq" type="search" placeholder="Find a brand" autocomplete="off" spellcheck="false" aria-label="Brand name"></div>
+    <ul id="findlist"></ul>
+  </div>
+</div></div>
+<main>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Apps · 03</div>
+  <h1 style="margin-top:18px">Sweat Loss Calculator</h1>
+  <p class="lead" style="margin-top:24px">Shows how much fluid you lose through sweat during training.</p>
+  <div class="appnav"><a class="btn" href="apps.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All apps</a></div>
+</div></header>
+<section><div class="wrap">
+  <div class="apptool">
+<!-- balance. — Tool 3: Sweat Loss Calculator (paste into a Shopify "Custom Liquid" section) -->
+<div class="bal-sweat-card" id="bal-sweat-root">
+  <h2 class="bal-sweat-title">sweat loss calculator</h2>
+  <p class="bal-sweat-intro">Weigh yourself with minimal clothing, before and after, after towelling off.</p>
+
+  <fieldset class="bal-sweat-fieldset">
+    <legend class="bal-sweat-label">Weight unit</legend>
+    <div class="bal-sweat-seg">
+      <input class="bal-sweat-sr" type="radio" name="bal-sweat-unit" id="bal-sweat-unit-kg" value="kg" checked>
+      <label for="bal-sweat-unit-kg">kg</label>
+      <input class="bal-sweat-sr" type="radio" name="bal-sweat-unit" id="bal-sweat-unit-st" value="st">
+      <label for="bal-sweat-unit-st">st &amp; lb</label>
+    </div>
+  </fieldset>
+
+  <!-- Weight before -->
+  <div class="bal-sweat-field" data-unit="kg">
+    <label class="bal-sweat-label" for="bal-sweat-before-kg">Weight before exercise (kg)</label>
+    <input class="bal-sweat-input" id="bal-sweat-before-kg" type="number" inputmode="decimal" min="30" max="250" step="0.1" placeholder="e.g. 70.4" aria-describedby="bal-sweat-before-msg">
+  </div>
+  <div class="bal-sweat-field" data-unit="st" hidden>
+    <span class="bal-sweat-label" id="bal-sweat-before-st-label">Weight before exercise</span>
+    <div class="bal-sweat-pair">
+      <div>
+        <label class="bal-sweat-sublabel" for="bal-sweat-before-st">Stone</label>
+        <input class="bal-sweat-input" id="bal-sweat-before-st" aria-label="Weight before exercise, stone" type="number" inputmode="numeric" min="0" max="40" step="1" aria-describedby="bal-sweat-before-msg">
+      </div>
+      <div>
+        <label class="bal-sweat-sublabel" for="bal-sweat-before-lb">Pounds</label>
+        <input class="bal-sweat-input" id="bal-sweat-before-lb" aria-label="Weight before exercise, pounds" type="number" inputmode="decimal" min="0" max="13.9" step="0.1" aria-describedby="bal-sweat-before-msg">
+      </div>
+    </div>
+  </div>
+  <p class="bal-sweat-msg" id="bal-sweat-before-msg"></p>
+
+  <!-- Weight after -->
+  <div class="bal-sweat-field" data-unit="kg">
+    <label class="bal-sweat-label" for="bal-sweat-after-kg">Weight after exercise (kg)</label>
+    <input class="bal-sweat-input" id="bal-sweat-after-kg" type="number" inputmode="decimal" min="30" max="250" step="0.1" placeholder="e.g. 69.6" aria-describedby="bal-sweat-after-msg">
+  </div>
+  <div class="bal-sweat-field" data-unit="st" hidden>
+    <span class="bal-sweat-label" id="bal-sweat-after-st-label">Weight after exercise</span>
+    <div class="bal-sweat-pair">
+      <div>
+        <label class="bal-sweat-sublabel" for="bal-sweat-after-st">Stone</label>
+        <input class="bal-sweat-input" id="bal-sweat-after-st" aria-label="Weight after exercise, stone" type="number" inputmode="numeric" min="0" max="40" step="1" aria-describedby="bal-sweat-after-msg">
+      </div>
+      <div>
+        <label class="bal-sweat-sublabel" for="bal-sweat-after-lb">Pounds</label>
+        <input class="bal-sweat-input" id="bal-sweat-after-lb" aria-label="Weight after exercise, pounds" type="number" inputmode="decimal" min="0" max="13.9" step="0.1" aria-describedby="bal-sweat-after-msg">
+      </div>
+    </div>
+  </div>
+  <p class="bal-sweat-msg" id="bal-sweat-after-msg"></p>
+
+  <div class="bal-sweat-grid">
+    <div class="bal-sweat-field">
+      <label class="bal-sweat-label" for="bal-sweat-fluid">Fluid drunk during exercise (ml)</label>
+      <input class="bal-sweat-input" id="bal-sweat-fluid" type="number" inputmode="numeric" min="0" max="5000" step="50" value="0" aria-describedby="bal-sweat-fluid-msg">
+      <p class="bal-sweat-msg" id="bal-sweat-fluid-msg"></p>
+    </div>
+    <div class="bal-sweat-field">
+      <label class="bal-sweat-label" for="bal-sweat-urine">Toilet visits during exercise, approximate urine (ml, optional)</label>
+      <input class="bal-sweat-input" id="bal-sweat-urine" type="number" inputmode="numeric" min="0" max="3000" step="50" value="0" aria-describedby="bal-sweat-urine-msg">
+      <p class="bal-sweat-msg" id="bal-sweat-urine-msg"></p>
+    </div>
+  </div>
+
+  <div class="bal-sweat-field">
+    <label class="bal-sweat-label" for="bal-sweat-mins">Exercise duration (minutes)</label>
+    <input class="bal-sweat-input" id="bal-sweat-mins" type="number" inputmode="numeric" min="1" max="600" step="1" placeholder="e.g. 60" aria-describedby="bal-sweat-mins-msg">
+    <p class="bal-sweat-msg" id="bal-sweat-mins-msg"></p>
+  </div>
+
+  <div class="bal-sweat-results" id="bal-sweat-results" aria-live="polite"></div>
+
+  <p class="bal-sweat-privacy">Your answers stay on this device and aren't saved.</p>
+  <p class="bal-sweat-disclaimer">This is a general estimate for healthy adults and isn't medical advice. If you have a medical condition, are pregnant or breastfeeding, or are unsure, speak to a healthcare professional.</p>
+</div>
+
+<style>
+.bal-sweat-card{box-sizing:border-box;font-family:Poppins,sans-serif;font-size:max(1rem,16px);line-height:1.5;color:#111111;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:7px;padding:2em;max-width:40em;margin:0 auto;text-align:left}
+.bal-sweat-card *,.bal-sweat-card *::before,.bal-sweat-card *::after{box-sizing:border-box}
+.bal-sweat-title{font-family:Poppins,sans-serif;font-size:1.625em;font-weight:300;line-height:1.2;letter-spacing:-.034em;color:#111111;margin:0 0 .35em}
+.bal-sweat-intro{font-size:.9375em;color:#111111;margin:0 0 1.25em;padding:.75em 1em;background:#F5F5F5;border:0;border-radius:7px}
+.bal-sweat-field{margin:0 0 1em}
+.bal-sweat-field[hidden]{display:none}
+.bal-sweat-fieldset{border:0;padding:0;margin:0 0 1em;min-width:0}
+.bal-sweat-label{display:block;font-size:.875em;font-weight:400;margin:0 0 .4em;padding:0;color:#111111}
+.bal-sweat-sublabel{display:block;font-size:.8125em;color:#666666;margin:0 0 .3em}
+.bal-sweat-input{width:100%;min-height:2.75em;padding:.5em .75em;font:inherit;font-size:1em;color:#111111;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:7px}
+.bal-sweat-input[aria-invalid="true"]{border-color:#111111}
+.bal-sweat-pair{display:grid;grid-template-columns:1fr 1fr;gap:.75em}
+.bal-sweat-grid{display:grid;grid-template-columns:1fr;gap:0 .75em}
+@media (min-width:36em){.bal-sweat-grid{grid-template-columns:1fr 1fr;align-items:end} }
+.bal-sweat-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.bal-sweat-seg{display:flex;flex-wrap:wrap;gap:.5em}
+.bal-sweat-seg label{display:inline-flex;align-items:center;justify-content:center;min-height:2.95em;min-width:5em;padding:.5em 1em;font-size:.9375em;color:#111111;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:7px;cursor:pointer;flex:1 1 auto}
+.bal-sweat-seg input:checked+label{background:#111111;border-color:#111111;color:#FFFFFF}
+.bal-sweat-seg input:focus-visible+label,.bal-sweat-input:focus-visible{outline:2px solid #111111;outline-offset:2px}
+.bal-sweat-msg{font-size:.8125em;color:#666666;margin:.35em 0 0}
+.bal-sweat-msg:empty{display:none}
+#bal-sweat-before-msg,#bal-sweat-after-msg{margin:-.6em 0 1em}
+.bal-sweat-results{margin-top:1.25em;padding-top:1.25em;border-top:1px solid #E5E5E5}
+.bal-sweat-results:empty{display:none}
+.bal-sweat-big{font-size:2em;font-weight:300;line-height:1.15;letter-spacing:-.04em;margin:0 0 .3em;color:#111111}
+.bal-sweat-line{font-size:.9375em;margin:.35em 0 0;color:#111111}
+.bal-sweat-note{font-size:.875em;color:#111111;margin:.9em 0 0;padding:.75em 1em;background:#F5F5F5;border:0;border-radius:7px}
+.bal-sweat-privacy{font-size:.8125em;color:#666666;margin:1.5em 0 .5em}
+.bal-sweat-disclaimer{font-size:.75em;line-height:1.5;color:#666666;margin:0}
+@media (max-width:30em){.bal-sweat-card{padding:1.25em 1em}.bal-sweat-big{font-size:1.625em} }
+@media (prefers-reduced-motion:reduce){.bal-sweat-card *{transition:none!important;animation:none!important} }
+</style>
+
+<script>
+(function () {
+  /* ===================== CONFIG — edit these values ===================== */
+  var CONFIG = {
+    BOTTLE_ML: 887,                 // Balance Bottle 30oz = 30 US fl oz
+    MIN_KG: 30,
+    MAX_KG: 250,
+    MAX_CHANGE_PERCENT: 10,         // flag before/after differences larger than this as unrealistic
+    MAX_FLUID_ML: 5000,
+    MAX_URINE_ML: 3000,
+    MAX_MINUTES: 600,
+    SIGNIFICANT_LOSS_PERCENT: 2
+  };
+  /* ====================================================================== */
+
+  var root = document.getElementById("bal-sweat-root");
+  if (!root) return;
+  var KG_PER_LB = 0.45359237;
+  var el = function (id) { return document.getElementById(id); };
+  var results = el("bal-sweat-results");
+
+  function unit() { return root.querySelector('input[name="bal-sweat-unit"]:checked').value; }
+  function num(input) {
+    var raw = input.value.trim();
+    if (raw === "") return { empty: true };
+    var n = Number(raw);
+    return isFinite(n) ? { n: n } : { bad: true };
+  }
+  function setMsg(id, text, inputs, showInvalid) {
+    el(id).textContent = text;
+    inputs.forEach(function (i) { i.setAttribute("aria-invalid", text && showInvalid !== false ? "true" : "false"); });
+  }
+  function round1(n) { return Math.round(n * 10) / 10; }
+  function l2(n) { return n.toFixed(2); }
+
+  // Reads "before" or "after" weight in kg; returns null and shows a message if not usable.
+  function readWeight(which, label) {
+    var msgId = "bal-sweat-" + which + "-msg";
+    var kg = null, text = "", inputs, isEmpty = false;
+    if (unit() === "kg") {
+      var input = el("bal-sweat-" + which + "-kg");
+      inputs = [input];
+      var k = num(input);
+      if (k.empty) { text = "Enter your weight " + label + " exercise."; isEmpty = true; }
+      else if (k.bad) text = "Please enter a number.";
+      else if (k.n < 0) text = "Weight can't be negative.";
+      else kg = k.n;
+    } else {
+      var st = el("bal-sweat-" + which + "-st"), lb = el("bal-sweat-" + which + "-lb");
+      inputs = [st, lb];
+      var s = num(st), l = num(lb);
+      if (s.empty && l.empty) { text = "Enter your weight " + label + " exercise."; isEmpty = true; }
+      else if (s.bad || l.bad) text = "Please enter numbers only.";
+      else if ((s.n || 0) < 0 || (l.n || 0) < 0) text = "Weight can't be negative.";
+      else if ((l.n || 0) >= 14) text = "Pounds should be less than 14 — add the extra to stone.";
+      else kg = (((s.n || 0) * 14) + (l.n || 0)) * KG_PER_LB;
+    }
+    if (kg !== null && (kg < CONFIG.MIN_KG || kg > CONFIG.MAX_KG)) {
+      text = "Please enter a weight between " + CONFIG.MIN_KG + " and " + CONFIG.MAX_KG + " kg (about 4 st 10 lb to 39 st 5 lb).";
+      kg = null;
+    }
+    setMsg(msgId, text, inputs, !isEmpty);
+    return kg;
+  }
+
+  function readMl(id, max, label, optional) {
+    var input = el(id), m = num(input), text = "", value = null;
+    if (m.empty) { if (optional) value = 0; else text = "Enter " + label + " (use 0 if none)."; }
+    else if (m.bad) text = "Please enter a number.";
+    else if (m.n < 0) text = "This can't be negative.";
+    else if (m.n > max) text = "That seems very high — please enter up to " + max + " ml.";
+    else value = m.n;
+    setMsg(id + "-msg", text, [input]);
+    return value;
+  }
+
+  function readMinutes() {
+    var input = el("bal-sweat-mins"), m = num(input), text = "", value = null, isEmpty = false;
+    if (m.empty) { text = "Enter how long you exercised for."; isEmpty = true; }
+    else if (m.bad) text = "Please enter a number of minutes.";
+    else if (m.n <= 0) text = "Duration needs to be more than 0 minutes.";
+    else if (m.n > CONFIG.MAX_MINUTES) text = "Please enter up to " + CONFIG.MAX_MINUTES + " minutes.";
+    else value = m.n;
+    setMsg("bal-sweat-mins-msg", text, [input], !isEmpty);
+    return value;
+  }
+
+  function bottles(litres) {
+    var b = Math.round((litres * 1000 / CONFIG.BOTTLE_ML) * 10) / 10;
+    return b.toFixed(1) + " Balance Bottle" + (b === 1 ? "" : "s");
+  }
+
+  function update() {
+    var before = readWeight("before", "before");
+    var after = readWeight("after", "after");
+    var fluid = readMl("bal-sweat-fluid", CONFIG.MAX_FLUID_ML, "the fluid you drank", false);
+    var urine = readMl("bal-sweat-urine", CONFIG.MAX_URINE_ML, "", true);
+    var minutes = readMinutes();
+
+    if (before === null || after === null || fluid === null || urine === null || minutes === null) {
+      results.innerHTML = "";
+      return;
+    }
+    if (Math.abs(before - after) / before * 100 > CONFIG.MAX_CHANGE_PERCENT) {
+      setMsg("bal-sweat-after-msg", "That's a very large change from your starting weight — please check both weights.",
+        unit() === "kg" ? [el("bal-sweat-after-kg")] : [el("bal-sweat-after-st"), el("bal-sweat-after-lb")]);
+      results.innerHTML = "";
+      return;
+    }
+
+    var weightLossKg = before - after;
+    var sweatLossL = weightLossKg + (fluid / 1000) - (urine / 1000);
+    var sweatRateLPerHour = sweatLossL / (minutes / 60);
+    var percentBodyMassLost = (weightLossKg / before) * 100;
+
+    var html = "";
+    if (sweatLossL > 0) {
+      html += '<p class="bal-sweat-big">Estimated sweat loss: ' + l2(sweatLossL) + " litres (about " + l2(sweatRateLPerHour) + " litres per hour)</p>" +
+        '<p class="bal-sweat-line">That\'s about ' + bottles(sweatLossL) + " in total, or " + bottles(sweatRateLPerHour) + " per hour.</p>";
+    } else {
+      html += '<p class="bal-sweat-line">We couldn\'t estimate a sweat loss from these numbers — please check them.</p>';
+    }
+    if (weightLossKg < 0) {
+      html += '<p class="bal-sweat-line">You finished heavier than you started, which usually means you drank more than you lost.</p>';
+    } else {
+      html += '<p class="bal-sweat-line">You lost ' + round1(percentBodyMassLost).toFixed(1) + "% of your body weight during this session.</p>";
+    }
+    if (percentBodyMassLost >= CONFIG.SIGNIFICANT_LOSS_PERCENT) {
+      html += '<p class="bal-sweat-note">A loss of 2% or more is generally considered significant. Many guidelines suggest drinking gradually over the next few hours to make up the difference.</p>';
+    }
+    results.innerHTML = html;
+  }
+
+  // Switch units and convert any weights already entered.
+  root.addEventListener("change", function (e) {
+    if (e.target.name !== "bal-sweat-unit") return;
+    var toSt = e.target.value === "st";
+    ["before", "after"].forEach(function (w) {
+      var kgIn = el("bal-sweat-" + w + "-kg"), stIn = el("bal-sweat-" + w + "-st"), lbIn = el("bal-sweat-" + w + "-lb");
+      if (toSt) {
+        var k = num(kgIn);
+        if (k.n > 0) { var lbs = k.n / KG_PER_LB; stIn.value = Math.floor(lbs / 14); lbIn.value = round1(lbs % 14); }
+      } else {
+        var s = num(stIn), l = num(lbIn);
+        if (s.n || l.n) kgIn.value = round1((((s.n || 0) * 14) + (l.n || 0)) * KG_PER_LB);
+      }
+    });
+    root.querySelectorAll(".bal-sweat-field[data-unit]").forEach(function (f) {
+      f.hidden = f.getAttribute("data-unit") !== (toSt ? "st" : "kg");
+    });
+  });
+  root.addEventListener("input", update);
+  root.addEventListener("change", update);
+  update();
+})();
+</script>
+
+  </div>
+  <nav class="apppager" aria-label="Other apps"><a href="app-daily-water-target.html"><small>← Previous</small><span>Daily Water Target</span></a><a class="nx" href="app-cost-per-serving.html"><small>Next →</small><span>Cost Per Serving</span></a></nav>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <p class="credit" style="margin-top:0">Prepared by O. Gazi Kavak</p>
+</div></footer>
+<script>
+const BRANDS=[{"id": "selene", "name": "balance. Selene", "short": "Selene", "accent": "#111111", "note": "Reference"}, {"id": "ab", "name": "Ancient + Brave", "short": "A+B", "accent": "#535F4A", "note": "£1.07/serving"}, {"id": "artah", "name": "ARTAH", "short": "ARTAH", "accent": "#000000", "note": "£1.07/serving"}, {"id": "drvegan", "name": "DR.VEGAN", "short": "DR.VEGAN", "accent": "#C2185B", "note": "£1.33/serving"}, {"id": "freesoul", "name": "Free Soul", "short": "Free Soul", "accent": "#39000B", "note": "£1.08/serving"}, {"id": "heights", "name": "Heights", "short": "Heights", "accent": "#010071", "note": "£1.21/serving"}, {"id": "humantra", "name": "Humantra", "short": "Humantra", "accent": "#75DFE3", "note": "£1.40/serving"}, {"id": "innermost", "name": "Innermost", "short": "Innermost", "accent": "#BFE0E6", "note": "£1.10/serving"}, {"id": "liquidiv", "name": "Liquid I.V.", "short": "Liquid I.V.", "accent": "#1B75BB", "note": "£1.27/serving"}, {"id": "lmnt", "name": "LMNT", "short": "LMNT", "accent": "#FFF200", "note": "£1.27/serving"}, {"id": "pfh", "name": "Precision Fuel & Hydration", "short": "PF&H", "accent": "#6A2C91", "note": "£0.90/serving"}, {"id": "punchy", "name": "Punchy", "short": "Punchy", "accent": "#D1E2A9", "note": "£1.35/serving"}, {"id": "puresport", "name": "Puresport", "short": "Puresport", "accent": "#E8476A", "note": "£1.10/serving"}, {"id": "sis", "name": "Science in Sport (SiS)", "short": "SiS", "accent": "#E6007E", "note": "£0.38/serving"}, {"id": "spacegoods", "name": "Spacegoods", "short": "Spacegoods", "accent": "#8E7BD6", "note": "£2.00/serving"}, {"id": "styrkr", "name": "STYRKR", "short": "STYRKR", "accent": "#1D1D1B", "note": "£1.00/serving"}, {"id": "sult", "name": "SULT", "short": "SULT", "accent": "#CDFF00", "note": "£1.19/serving"}, {"id": "veloforte", "name": "Veloforte", "short": "Veloforte", "accent": "#F28C28", "note": "£2.08/serving"}, {"id": "zooki", "name": "Zooki", "short": "Zooki", "accent": "#D85418", "note": "£2.14/serving"}];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TOP=document.querySelector(".top"), burger=document.getElementById("burger");
+const finder=document.getElementById("finder"), findbtn=document.getElementById("findbtn"), findq=document.getElementById("findq"), findlist=document.getElementById("findlist");
+let act=0;
+function renderFind(){
+  const q=findq.value.trim().toLowerCase();
+  const hits=BRANDS.filter(b=>!q||b.name.toLowerCase().includes(q)||b.short.toLowerCase().includes(q));
+  act=Math.min(act,Math.max(0,hits.length-1));
+  findlist.innerHTML=hits.length?hits.map((b,i)=>`<li><a href="index.html#/brand/${b.id}" class="${i===act?"act":""}"><i style="background:${b.accent}"></i><span>${esc(b.name)}</span><small>${b.note}</small></a></li>`).join(""):`<li class="empty">No brand matches “${esc(findq.value)}”.</li>`;
+}
+function setMenu(open){TOP.classList.toggle("open",open); document.body.classList.toggle("lock",open); burger.setAttribute("aria-expanded",open); burger.setAttribute("aria-label",open?"Close menu":"Open menu"); if(open) setFinder(false);}
+function setFinder(open){finder.hidden=!open; findbtn.setAttribute("aria-expanded",open); if(open){setMenu(false); findq.value=""; act=0; renderFind(); setTimeout(()=>findq.focus(),0);}}
+burger.addEventListener("click",()=>setMenu(!TOP.classList.contains("open")));
+findbtn.addEventListener("click",()=>setFinder(finder.hidden));
+findq.addEventListener("input",()=>{act=0; renderFind();});
+findq.addEventListener("keydown",e=>{
+  const items=findlist.querySelectorAll("a");
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault(); act=(act+(e.key==="ArrowDown"?1:-1)+items.length)%Math.max(1,items.length); renderFind(); const a=findlist.querySelectorAll("a")[act]; a&&a.scrollIntoView({block:"nearest"});}
+  else if(e.key==="Enter"&&items[act]){e.preventDefault(); location.href=items[act].getAttribute("href");}
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){if(!finder.hidden){setFinder(false); findbtn.focus();} setMenu(false);}
+  else if(e.key==="/"&&finder.hidden&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault(); setFinder(true);}
+});
+document.addEventListener("click",e=>{if(!TOP.contains(e.target)){setFinder(false); setMenu(false);}});
+document.getElementById("menu").addEventListener("click",e=>{if(e.target.closest("a")) setMenu(false);});
+document.querySelectorAll(".toc2 a").forEach(a=>a.addEventListener("click",e=>{const el=document.querySelector(a.getAttribute("href")); if(el){e.preventDefault(); el.scrollIntoView({behavior:"smooth"}); history.replaceState(null,"",a.getAttribute("href"));}}));
+</script>
+</body>
+</html>
