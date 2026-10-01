@@ -2,7 +2,7 @@
 
 Brand Radar: 19 UK electrolyte & calm brands: product and price, packaging, website and tech stack, typography, technical SEO, Instagram and Meta ads.
 
-Prepared by O. Gazi Kavak · October 2026.
+Prepared by O. Gazi Kavak.
 
 ## Structure
 
